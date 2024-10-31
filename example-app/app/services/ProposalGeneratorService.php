@@ -46,127 +46,99 @@ $job->save();
     return json_encode($response['content'][0]['text']);
   }
 
-  5ab332c1c41a6 sql_prezentacje_soft_synergy_com
 
   public function generatePresentation (UsemeJob $job, $response)
   {
     $prompt = 'to jest propozycja projektu: ' . $response['content'][0]['text'] . '
 
 
-    przygotuj prezentację w formie json identycznej w formacie do tej poniżej Adekwatnej do projektu. pamiętaj o tym aby wszystko było po polsku i zgodne z projektem. 
+    przygotuj prezentację w formie json identycznej w formacie do tej poniżej Adekwatnej do projektu. pamiętaj o tym aby wszystko było po polsku i zgodne z projektem. na wykresie jako data załącz czas wykonania etapu koniecznie w dniach wazne aby w kafelkach był końcowy koszt wyukonania całego projektu
     {
-  "projectInfo": {
-    "title": "Project Vision 2025",
-    "description": "Transformacja cyfrowa nowej generacji z wykorzystaniem najnowszych technologii i metodyk zarządzania projektami."
-  },
-  "keyMetrics": [
-    {
-      "title": "Czas realizacji",
-      "value": "6 miesięcy",
-      "subtitle": "Q4 2024 - Q2 2025"
-    },
-    {
-      "title": "Budżet",
-      "value": "350,000 PLN",
-      "subtitle": "Optymalizacja kosztów"
-    },
-    {
-      "title": "Zespół",
-      "value": "8 ekspertów",
-      "subtitle": "Dedykowany zespół"
-    },
-    {
-      "title": "Kamienie milowe",
-      "value": "5 etapów",
-      "subtitle": "Precyzyjne planowanie"
-    }
-  ],
-  "projectPhases": [
-    {
-      "title": "Faza 1: Analiza i planowanie",
-      "period": "Grudzień 2024",
-      "budget": "45,000",
-      "description": "Kompleksowa analiza wymagań, architektura systemu, planowanie UX"
-    },
-    {
-      "title": "Faza 2: Design i prototypowanie",
-      "period": "Styczeń-Luty 2025",
-      "budget": "65,000",
-      "description": "UI/UX design, interaktywne prototypy, user testing"
-    },
-    {
-      "title": "Faza 3: Development",
-      "period": "Luty-Kwiecień 2025",
-      "budget": "120,000",
-      "description": "Full-stack development, integracje, optymalizacja"
-    },
-    {
-      "title": "Faza 4: Testy i QA",
-      "period": "Kwiecień-Maj 2025",
-      "budget": "70,000",
-      "description": "Testing, QA, optymalizacja wydajności"
-    },
-    {
-      "title": "Faza 5: Wdrożenie",
-      "period": "Maj 2025",
-      "budget": "50,000",
-      "description": "Deployment, dokumentacja, szkolenia"
-    }
-  ],
-  "teams": [
-    {
-      "name": "Development Team",
-      "members": [
-        "3 Senior Developers",
-        "2 Frontend Specialists",
-        "1 Database Expert"
-      ]
-    },
-    {
-      "name": "Support Team",
-      "members": [
-        "1 UX/UI Designer",
-        "1 QA Engineer",
-        "1 Business Analyst"
-      ]
-    }
-  ],
-  "technology": [
-    {
-      "name": "Stack technologiczny",
-      "items": [
-        "Next.js & React",
-        "Node.js & Express",
-        "PostgreSQL & Redis"
-      ]
-    },
-    {
-      "name": "Metodyka",
-      "items": [
-        "Agile & Scrum",
-        "CI/CD Pipeline",
-        "Cloud-Native"
-      ]
-    }
-  ],
-  "ganttChart": {
-    "labels": ["Analiza i planowanie", "Design i prototypowanie", "Rozwój MVP", "Testy i QA", "Wdrożenie"],
-    "data": [1, 1.5, 2, 1, 0.5],
-    "backgroundColor": [
-      "rgba(54, 162, 235, 0.8)",
-      "rgba(75, 192, 192, 0.8)",
-      "rgba(153, 102, 255, 0.8)",
-      "rgba(255, 159, 64, 0.8)",
-      "rgba(255, 99, 132, 0.8)"
+    "company": "Soft Synergy",
+    "project_title": "Projekt Automatyzacji Procesów",
+    "project_subtitle": "Innowacyjne rozwiązania dostosowane do Twoich unikalnych potrzeb biznesowych",
+    "metrics": [
+        {
+            "icon": "fas fa-clock",
+            "title": "Czas oszczędzony",
+            "value": "250 godzin",
+            "description": "Zredukowany czas operacyjny na powtarzalnych zadaniach."
+        },
+        {
+            "icon": "fas fa-money-bill-wave",
+            "title": "Oszczędności kosztów",
+            "value": "50,000 PLN",
+            "description": "Obniżenie kosztów operacyjnych w wyniku automatyzacji."
+        },
+        {
+            "icon": "fas fa-user-check",
+            "title": "Satysfakcja klientów",
+            "value": "95%",
+            "description": "Wzrost poziomu zadowolenia klientów po wdrożeniu rozwiązania."
+        },
+        {
+            "icon": "fas fa-robot",
+            "title": "Automatyzacja procesów",
+            "value": "80%",
+            "description": "Udział zautomatyzowanych procesów w całej organizacji."
+        }
     ],
-    "borderColor": [
-      "rgba(54, 162, 235, 1)",
-      "rgba(75, 192, 192, 1)",
-      "rgba(153, 102, 255, 1)",
-      "rgba(255, 159, 64, 1)",
-      "rgba(255, 99, 132, 1)"
-    ]
-  }
+    "timeline": [
+        {
+            "icon": "fas fa-lightbulb",
+            "title": "Analiza potrzeb",
+            "duration": "1 miesiąc",
+            "budget": "10,000 PLN",
+            "description": "Analiza wymagań biznesowych i technologicznych klienta."
+        },
+        {
+            "icon": "fas fa-code",
+            "title": "Projektowanie rozwiązania",
+            "duration": "2 miesiące",
+            "budget": "20,000 PLN",
+            "description": "Opracowanie architektury systemu oraz wstępnych prototypów."
+        },
+        {
+            "icon": "fas fa-cogs",
+            "title": "Implementacja",
+            "duration": "3 miesiące",
+            "budget": "50,000 PLN",
+            "description": "Prace nad wdrożeniem rozwiązania oraz integracją z istniejącymi systemami."
+        },
+        {
+            "icon": "fas fa-chart-line",
+            "title": "Testowanie i optymalizacja",
+            "duration": "1 miesiąc",
+            "budget": "15,000 PLN",
+            "description": "Sprawdzenie jakości, testy funkcjonalne oraz wprowadzenie optymalizacji."
+        }
+    ],
+    "progress": {
+        "labels": ["Analiza", "Projektowanie", "Implementacja", "Testowanie"],
+        "data": [100, 100, 75, 50]
+    },
+    "technologies": [
+        {
+            "icon": "fas fa-brain",
+            "title": "Sztuczna Inteligencja",
+            "details": ["Machine Learning", "Przetwarzanie języka naturalnego", "Analiza predykcyjna"]
+        },
+        {
+            "icon": "fas fa-database",
+            "title": "Big Data",
+            "details": ["Przechowywanie danych", "Analiza dużych zbiorów danych", "Optymalizacja wydajności"]
+        }
+    ],
+    "testimonial": {
+        "text": "Soft Synergy dostarczyło nam rozwiązanie, które znacząco poprawiło naszą efektywność i zadowolenie klientów.",
+        "author": "Jan Kowalski, CEO ABC Corp"
+    },
+    "cta": {
+        "title": "Gotowy na transformację?",
+        "description": "Skontaktuj się z nami, aby dowiedzieć się więcej o możliwościach automatyzacji procesów.",
+        "button_url": "https://soft-synergy.com/contact",
+        "button_text": "Umów spotkanie"
+    }
 }
  ';
  $response = $this->clauteHelper->sendMessage($prompt);

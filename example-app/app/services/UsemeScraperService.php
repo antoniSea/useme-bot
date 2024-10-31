@@ -38,7 +38,6 @@ class UsemeScraperService
         'Analityka internetowa',
         'Strony internetowe'
     ];
-
     /**
      * Check if job category is allowed
      */

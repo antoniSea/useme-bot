@@ -19,7 +19,6 @@ class ClauteHelper
             throw new Exception('Anthropic API key not found in environment variables');
         }
     }
-
     /**
      * Send a message to Claude and get the response
      *
@@ -36,7 +35,7 @@ class ClauteHelper
                 'content-type' => 'application/json',
             ])->post($this->baseUrl, [
                 'model' => $options['model'] ?? $this->model,
-                'max_tokens' => $options['max_tokens'] ?? 1024,
+                'max_tokens' => $options['max_tokens'] ?? 2048,
                 'messages' => [
                     [
                         'role' => 'user',

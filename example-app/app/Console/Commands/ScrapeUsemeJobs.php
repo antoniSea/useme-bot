@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 
 class ScrapeUsemeJobs extends Command
 {
-    protected $signature = 'scrape:useme {pages=1}';
+    protected $signature = 'scrape:useme {pages=2}';
     protected $description = 'Scrape jobs from Useme website';
 
     public function handle(UsemeScraperService $scraperService)

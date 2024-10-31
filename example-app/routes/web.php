@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\UsemeJobController;
 use App\Models\UsemeJob;
+use App\Services\ProposalMessagerService;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $service = app(ProposalMessagerService::class);
+
+    return $service->check();
 });
 
 Route::middleware([
@@ -19,7 +22,6 @@ Route::middleware([
 
     Route::get('show/{UsemeJob}', [UsemeJobController::class, 'show'])->name('show');
     Route::delete('show/{UsemeJob}', [UsemeJobController::class, 'show'])->name('delete');
-
-    Route::get('show/{UsemeJob}/presentation', [UsemeJobController::class, 'presentation'])->name('presentation');
     
 });
+Route::get('/{UsemeJob}', [UsemeJobController::class, 'presentation'])->name('presentation');
