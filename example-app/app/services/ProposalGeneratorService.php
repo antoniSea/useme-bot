@@ -52,7 +52,12 @@ $job->save();
     $prompt = 'to jest propozycja projektu: ' . $response['content'][0]['text'] . '
 
 
-    przygotuj prezentację w formie json identycznej w formacie do tej poniżej Adekwatnej do projektu. pamiętaj o tym aby wszystko było po polsku i zgodne z projektem. na wykresie jako data załącz czas wykonania etapu koniecznie w dniach wazne aby w kafelkach był końcowy koszt wyukonania całego projektu
+    przygotuj prezentację w formie json identycznej w formacie do tej poniżej Adekwatnej do projektu. pamiętaj o tym aby wszystko było po polsku i zgodne z projektem. na wykresie jako data załącz czas wykonania etapu koniecznie w dniach wazne aby w kafelkach był końcowy koszt wyukonania całego projektu uzyj tricków psychologoczynych aby zmaksymalizować szanse na wygranie projektu.
+
+    
+    na dole jest pole rating musisz obliczyć rating projektu na podstawie tego jak dobrze zgrywa się z naszą niszą i jak dobrze jest przygotowany. rating to liczba od 1 do 10 gdzie 1 to najgorszy projekt jaki widziałeś a 10 to najlepszy. rating musi być liczbą całkowitą. jesteśmy firmą zajmującą się automatyzacją i sztuczną inteligencją głównie działamy za pomocą laravel + vue + mysql i w tym stacku technologicznym czujemy się najlepiej.
+
+
     {
     "company": "Soft Synergy",
     "project_title": "Projekt Automatyzacji Procesów",
@@ -138,12 +143,18 @@ $job->save();
         "description": "Skontaktuj się z nami, aby dowiedzieć się więcej o możliwościach automatyzacji procesów.",
         "button_url": "https://soft-synergy.com/contact",
         "button_text": "Umów spotkanie"
+    },
+    {
+        "rating": 8
     }
 }
  ';
  $response = $this->clauteHelper->sendMessage($prompt);
 
+ // parse response for rating
+ $rating = preg_match('/"rating": (\d+)/', $response['content'][0]['text'], $matches);
 
+ $job->rating = $rating;
   $job->additional_indo =  str_replace( '\n', '', $response['content'][0]['text']);
   $job->save();
   }
