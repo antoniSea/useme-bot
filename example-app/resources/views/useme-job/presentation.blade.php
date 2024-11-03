@@ -632,10 +632,10 @@
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Analiza', 'Rozwój', 'Testy', 'Wdrożenie'],
+                labels: {!! json_encode($data['progress']->labels) !!},
                 datasets: [{
-                    label: 'Postęp (%)',
-                    data: [100, 85, 60, 30],
+                    label: 'Czas wykonania (dni)',
+                    data: {{ json_encode($data['progress']->data) }},
                     backgroundColor: 'rgba(37, 99, 235, 0.7)',
                     borderColor: 'rgba(37, 99, 235, 1)',
                     borderWidth: 1
