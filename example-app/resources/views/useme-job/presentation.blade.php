@@ -496,140 +496,116 @@
     </style>
 </head>
 <body>
-    <header class="no-print">
-        <div class="container">
-            <nav>
-                <div class="logo">Soft Synergy</div>
-                <div class="nav-links">
-                    <a href="#" onclick="window.print()"><i class="fas fa-print"></i> Drukuj</a>
-                    <a href="#" onclick="sharePage()"><i class="fas fa-share-alt"></i> Udostępnij</a>
-                    <a href="https://softsynergy.youcanbook.me/" target="_blank"><i class="fas fa-calendar-alt"></i> Umów spotkanie</a>
-                </div>
-            </nav>
-            <div class="hero">
-                <h1>Inteligentna Automatyzacja Procesów</h1>
-                <p class="subtitle">Transformacja cyfrowa dostosowana do Twoich unikalnych potrzeb biznesowych</p>
+ <!-- Header Section -->
+<header class="no-print">
+    <div class="container">
+        <nav>
+            <div class="logo">Soft Synergy</div>
+            <div class="nav-links">
+                <a href="#" onclick="window.print()"><i class="fas fa-print"></i> Drukuj</a>
+                <a href="#" onclick="sharePage()"><i class="fas fa-share-alt"></i> Udostępnij</a>
+                <a href="https://softsynergy.youcanbook.me/" target="_blank"><i class="fas fa-calendar-alt"></i> Umów spotkanie</a>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>{{ $data['project_title'] ?? 'Inteligentna Automatyzacja Procesów' }}</h1>
+            <p class="subtitle">{{ $data['project_subtitle'] ?? 'Transformacja cyfrowa dostosowana do Twoich unikalnych potrzeb biznesowych' }}</p>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container">
+    <!-- Author Section -->
+    <section class="author-info" data-aos="fade-up">
+        <div class="author-details">
+            <div class="author-avatar">AS</div>
+            <div class="author-text">
+                <h2>Antoni Seba</h2>
+                <p>Menadżer ds. Oprogramowania</p>
             </div>
         </div>
-    </header>
-
-    <main class="container">
-        <section class="author-info" data-aos="fade-up">
-            <div class="author-details">
-                <div class="author-avatar">AS</div>
-                <div class="author-text">
-                    <h2>Antoni Seba</h2>
-                    <p>Menadżer ds. Oprogramowania</p>
-                </div>
-            </div>
-            <div class="contact-info">
-                <a href="tel:576205389"><i class="fas fa-phone"></i>+48 576 205 389</a>
-                <a href="mailto:a.seba@soft-synergy.com"><i class="fas fa-envelope"></i>a.seba@soft-synergy.com</a>
-            </div>
-        </section>
-
-        <section class="main-content">
-            <div class="grid grid-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card">
-                    <h3><i class="fas fa-clock"></i> Oszczędność Czasu</h3>
-                    <div class="metric-value">65%</div>
-                    <p>Redukcja czasu wykonywania procesów biznesowych</p>
-                </div>
-                <div class="card">
-                    <h3><i class="fas fa-coins"></i> ROI</h3>
-                    <div class="metric-value">280%</div>
-                    <p>Zwrot z inwestycji w pierwszym roku</p>
-                </div>
-                <div class="card">
-                    <h3><i class="fas fa-chart-line"></i> Wydajność</h3>
-                    <div class="metric-value">95%</div>
-                    <p>Zwiększenie wydajności operacyjnej</p>
-                </div>
-                <div class="card">
-                    <h3><i class="fas fa-check-circle"></i> Dokładność</h3>
-                    <div class="metric-value">99.9%</div>
-                    <p>Redukcja błędów w procesach</p>
-                </div>
-            </div>
-
-            <div class="grid grid-2" style="margin-top: 4rem;">
-                <div class="card" data-aos="fade-right">
-                    <h3><i class="fas fa-tasks"></i> Harmonogram projektu</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h4><i class="fas fa-search"></i> Analiza i Planowanie</h4>
-                            <p>2 tygodnie • 15% budżetu</p>
-                            <p>Szczegółowa analiza procesów i określenie celów automatyzacji</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4><i class="fas fa-code"></i> Rozwój Rozwiązania</h4>
-                            <p>6 tygodni • 45% budżetu</p>
-                            <p>Implementacja systemu automatyzacji i integracja z istniejącymi narzędziami</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4><i class="fas fa-vial"></i> Testy i Optymalizacja</h4>
-                            <p>3 tygodnie • 25% budżetu</p>
-                            <p>Kompleksowe testy i dostrajanie wydajności systemu</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4><i class="fas fa-graduation-cap"></i> Wdrożenie i Szkolenia</h4>
-                            <p>2 tygodnie • 15% budżetu</p>
-                            <p>Pełne wdrożenie i szkolenia dla zespołu</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" data-aos="fade-left">
-                    <h3><i class="fas fa-chart-bar"></i> Postęp projektu</h3>
-                    <div class="chart-container">
-                        <canvas id="progressChart"></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" style="margin-top: 4rem;" data-aos="fade-up">
-                <h3><i class="fas fa-lightbulb"></i> Technologie i Innowacje</h3>
-                <div class="grid grid-2">
-                    <div>
-                        <h4><i class="fas fa-robot"></i> Automatyzacja</h4>
-                        <ul>
-                            <li>Robotyzacja Procesów Biznesowych (RPA)</li>
-                            <li>Sztuczna Inteligencja i Machine Learning</li>
-                            <li>Zaawansowana Analiza Danych</li>
-                            <li>Inteligentne Workflow</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4><i class="fas fa-shield-alt"></i> Bezpieczeństwo</h4>
-                        <ul>
-                            <li>Szyfrowanie End-to-End</li>
-                            <li>Wielopoziomowa Autentykacja</li>
-                            <li>Ciągłe Monitorowanie Bezpieczeństwa</li>
-                            <li>Zgodność z RODO</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial" data-aos="fade-up">
-                <p class="testimonial-text">Wdrożenie automatyzacji przez Soft Synergy przekroczyło nasze oczekiwania. Procesy, które zajmowały godziny, teraz wykonują się w minutach, a jakość pracy znacząco wzrosła.</p>
-                <p class="testimonial-author">- Marek Kowalski, Dyrektor Operacyjny</p>
-            </div>
-
-            <div class="cta" data-aos="fade-up">
-                <h2>Rozpocznij Transformację Cyfrową</h2>
-                <p>Umów bezpłatną konsultację i dowiedz się, jak możemy zoptymalizować procesy w Twojej firmie</p>
-                <a href="https://softsynergy.youcanbook.me/" class="cta-button" target="_blank">
-                    <i class="fas fa-calendar-check"></i> Zarezerwuj Spotkanie
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="no-print">
-        <div class="container">
-            <p>&copy; 2024 Soft Synergy. Wszelkie prawa zastrzeżone.</p>
+        <div class="contact-info">
+            <a href="tel:{{ $data['contact_phone'] ?? '576 205 389' }}"><i class="fas fa-phone"></i>+48 {{ $data['contact_phone'] ?? '576 205 389' }}</a>
+            <a href="mailto:{{ $data['contact_email'] ?? 'a.seba@soft-synergy.com' }}"><i class="fas fa-envelope"></i>{{ $data['contact_email'] ?? 'a.seba@soft-synergy.com' }}</a>
         </div>
-    </footer>
+    </section>
+
+    <!-- Project Metrics Section -->
+    <section class="main-content">
+        <div class="grid grid-4" data-aos="fade-up" data-aos-delay="200">
+            @foreach ($data['metrics'] as $metric)
+                <div class="card">
+                    <h3><i class="{{ $metric->icon }}"></i> {{ $metric->title }}</h3>
+                    <div class="metric-value">{{ $metric->value }}</div>
+                    <p>{{ $metric->description }}</p>
+                </div>
+            @endforeach
+        </div>
+
+        <!-- Project Timeline and Progress Chart -->
+        <div class="grid grid-2" style="margin-top: 4rem;">
+            <div class="card" data-aos="fade-right">
+                <h3><i class="fas fa-tasks"></i> Harmonogram projektu</h3>
+                <div class="timeline">
+                    @foreach ($data['timeline'] as $stage)
+                        <div class="timeline-item">
+                            <h4><i class="{{ $stage->icon }}"></i> {{ $stage->title }}</h4>
+                            <p>{{ $stage->duration }} • {{ $stage->budget }}</p>
+                            <p>{{ $stage->description }}</p>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="card" data-aos="fade-left">
+                <h3><i class="fas fa-chart-bar"></i> Postęp projektu</h3>
+                <div class="chart-container">
+                    <canvas id="progressChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technologies Section -->
+        <div class="card" style="margin-top: 4rem;" data-aos="fade-up">
+            <h3><i class="fas fa-lightbulb"></i> Technologie i Innowacje</h3>
+            <div class="grid grid-2">
+                @foreach ($data['technologies'] as $techCategory)
+                    <div>
+                        <h4><i class="{{ $techCategory->icon }}"></i> {{ $techCategory->title }}</h4>
+                        <ul>
+                            @foreach ($techCategory->details as $detail)
+                                <li>{{ $detail }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+        <!-- Testimonial Section -->
+        <div class="testimonial" data-aos="fade-up">
+            <p class="testimonial-text">{{ $data['testimonial']->text ?? 'Wdrożenie automatyzacji przez Soft Synergy przekroczyło nasze oczekiwania.' }}</p>
+            <p class="testimonial-author">- {{ $data['testimonial']->author ?? 'Marek Kowalski, Dyrektor Operacyjny' }}</p>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta" data-aos="fade-up">
+            <h2>{{ $data['cta']->title ?? 'Rozpocznij Transformację Cyfrową' }}</h2>
+            <p>{{ $data['cta']->description ?? 'Umów bezpłatną konsultację i dowiedz się, jak możemy zoptymalizować procesy w Twojej firmie' }}</p>
+            <a href="https://softsynergy.youcanbook.me/" class="cta-button" target="_blank">
+                <i class="fas fa-calendar-check"></i> {{ $data['cta']->button_text ?? 'Zarezerwuj Spotkanie' }}
+            </a>
+        </div>
+    </section>
+</main>
+
+<!-- Footer Section -->
+<footer class="no-print">
+    <div class="container">
+        <p>&copy; {{ now()->year }} Soft Synergy. Wszelkie prawa zastrzeżone.</p>
+    </div>
+</footer>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
