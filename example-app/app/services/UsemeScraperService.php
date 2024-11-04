@@ -37,7 +37,8 @@ class UsemeScraperService
         'Oprogramowanie',
         'Obsługa stron internetowych',
         'Analityka internetowa',
-        'Strony internetowe'
+        'Wprowadzanie danych',
+        'Social media'
     ];
     /**
      * Check if job category is allowed
