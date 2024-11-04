@@ -9,7 +9,7 @@ class ClauteHelper
 {
     private string $apiKey;
     private string $baseUrl = 'https://api.anthropic.com/v1/messages';
-    private string $model = 'claude-3-haiku-latest';
+    private string $model = 'claude-3-haiku-20240307';
 
     public function __construct()
     {
