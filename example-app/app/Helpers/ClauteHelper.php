@@ -9,7 +9,7 @@ class ClauteHelper
 {
     private string $apiKey;
     private string $baseUrl = 'https://api.anthropic.com/v1/messages';
-    private string $model = 'claude-3-haiku-20240307';
+    private string $model = 'claude-3-5-sonnet-latest';
 
     public function __construct()
     {
@@ -35,7 +35,7 @@ class ClauteHelper
                 'content-type' => 'application/json',
             ])->post($this->baseUrl, [
                 'model' => $options['model'] ?? $this->model,
-                'max_tokens' => $options['max_tokens'] ?? 4096,
+                'max_tokens' => $options['max_tokens'] ?? 2048,
                 'messages' => [
                     [
                         'role' => 'user',
