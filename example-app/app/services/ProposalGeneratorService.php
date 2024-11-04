@@ -61,7 +61,8 @@ $job->save();
 
 
     Pamiętaj nie dodawaj dodatkowych informacji ani adnotacji nie pisz dlaczego przyznałeś taki rating. oceniasz tylko na podstawie tego co widzisz na prezentacji. nic nie piszesz jesteś częsią automatu więc jak dodasz cokolwiek innego niz json cała prezentacja będzie nieprawidłowa i nie będzie brana pod uwagę.
-
+    
+    
 
     {
     "company": "Soft Synergy",
