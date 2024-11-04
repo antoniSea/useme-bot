@@ -35,7 +35,7 @@ class ClauteHelper
                 'content-type' => 'application/json',
             ])->post($this->baseUrl, [
                 'model' => $options['model'] ?? $this->model,
-                'max_tokens' => $options['max_tokens'] ?? 2048,
+                'max_tokens' => $options['max_tokens'] ?? 4096,
                 'messages' => [
                     [
                         'role' => 'user',
