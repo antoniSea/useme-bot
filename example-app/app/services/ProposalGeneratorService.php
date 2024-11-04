@@ -60,6 +60,9 @@ $job->save();
     na dole jest pole rating musisz obliczyć rating projektu na podstawie tego jak dobrze zgrywa się z naszą niszą i jak dobrze jest przygotowany. rating to liczba od 1 do 10 gdzie 1 to najgorszy projekt jaki widziałeś a 10 to najlepszy. rating musi być liczbą całkowitą. jesteśmy firmą zajmującą się automatyzacją i sztuczną inteligencją głównie działamy za pomocą laravel + vue + mysql i w tym stacku technologicznym czujemy się najlepiej.
 
 
+    Pamiętaj nie dodawaj dodatkowych informacji ani adnotacji nie pisz dlaczego przyznałeś taki rating. oceniasz tylko na podstawie tego co widzisz na prezentacji. nic nie piszesz jesteś częsią automatu więc jak dodasz cokolwiek innego niz json cała prezentacja będzie nieprawidłowa i nie będzie brana pod uwagę.
+
+
     {
     "company": "Soft Synergy",
     "project_title": "Projekt Automatyzacji Procesów",
