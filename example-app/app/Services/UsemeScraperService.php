@@ -252,7 +252,7 @@ class UsemeScraperService
                             $usemeJob->proposal_generated = $proposal;
                             $usemeJob->save();
 
-                            dispatch(new PostOfferToUsemeJob($usemeJob->id));
+                            dispatch(new PostOfferToUsemeJob($usemeJob->id))->delay(now()->addHour());
 
                             Log::info("Proposal generated successfully for model ID {$usemeJob->id}");
                         }

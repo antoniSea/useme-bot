@@ -145,8 +145,8 @@ class PostOfferToUsemeJob implements ShouldQueue
             '_gcl_aw=GCL.1725194894.CjwKCAjwodC2BhAHEiwAE67hJOc2UENB8ubefRgTgQVo1NkzLUb89-8rOEhoiKFACTi4eqVVsdswXxoCyGoQAvD_BwE',
             '_gcl_gs=2.1.k1$i1725194894',
             '_hjSessionUser_661614=eyJpZCI6ImU0NjczNWRkLTk5MjctNTVjNC1hYWZiLTE0MjJiM2NhZGU3ZSIsImNyZWF0ZWQiOjE3MjUxOTQ4OTQ1NjIsImV4aXN0aW5nIjp0cnVlfQ==',
-            'csrftoken=' . $csrfToken,
-            'sessionid=ih11rlnqbtoh8mkiiol5s258o074q1hv',
+            'csrftoken=' . $csrfToken,  // Update with the latest CSRF token
+            'sessionid=hm57m0jp20mgrkul7dqlgtcbjzrpmba3',   // Update with the latest session ID
             'user_id=219122',
             '_hjSession_661614=eyJpZCI6ImRkZWU3NTBmLWYxMmEtNGYyMi1iZDM3LWU1NmI2YzZlNzQzZiIsImMiOjE3MzAwMjcxNzQ0ODUsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjEsImZzIjowLCJzcCI6MH0=',
             '__hstc=194865778.86bedd297b633165aec8f9759993a888.1725194891709.1730018976346.1730027179974.249',
